@@ -1,0 +1,55 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Mar 28 17:41:50 2022
+
+@author: Owner
+"""
+#A
+n=input("enter a number: ")
+fname=open('ex3_text.txt', 'r')
+file=fname.read()
+file=input("enter a file name:")
+ def read_line(n,file):
+         if type(n)=str():
+             print("invalid input detected")
+         if n>=29:
+             print("line"  str(n) "dosent exist")
+            
+         count=0
+         for line in file:
+             count=count+1
+             return (str(file[n-1].rstrip()))
+
+         else:
+             return ("file not found")
+         
+#B
+ 
+def longest_words(file2):
+    try:
+        len1 = dict()
+       list1 = []
+        lines = []
+        fname2 = open('ex3_text.txt', 'r')
+        for line in fname2:
+            line = line.rstrip('\n,-[]"". ')
+            lines.append(line)
+        len2 = len(lines)
+        for words in range(len2):
+           list1.append(lines[words].split())
+        for word in list1:
+            for keys in word:
+                list1[keys] = len(keys)
+        return sorted(list1, key=len1.get, reverse=True)[:5]
+    except:
+        return "file not found" []
+
+
+
+
+
+
+
+
+
+
